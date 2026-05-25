@@ -1,0 +1,21 @@
+[project]
+name = "riverline-collections-agents"
+version = "0.1.0"
+description = "Temporal-orchestrated self-learning collections agent prototype"
+requires-python = ">=3.11"
+dependencies = [
+  "temporalio>=1.9.0",
+  "openai>=1.66.0",
+  "tiktoken",
+  "fastapi[standard]",
+  "uvicorn[standard]",
+  "httpx",
+  "python-dotenv",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

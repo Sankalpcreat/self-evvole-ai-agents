@@ -1,0 +1,99 @@
+{
+  "version_id": "20260524T055054Z",
+  "agent_name": "agent2",
+  "created_at": "2026-05-24T05:50:54.692992+00:00",
+  "eval_data": {
+    "old_agg": {
+      "resolution_score": {
+        "mean": 0.25,
+        "std": 0.0,
+        "min": 0.25,
+        "max": 0.25,
+        "n": 1
+      },
+      "compliance_score": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "n": 1
+      },
+      "continuity_score": {
+        "mean": 0.6,
+        "std": 0.0,
+        "min": 0.6,
+        "max": 0.6,
+        "n": 1
+      },
+      "tone_score": {
+        "mean": 0.7,
+        "std": 0.0,
+        "min": 0.7,
+        "max": 0.7,
+        "n": 1
+      },
+      "information_gathering": {
+        "mean": 0.85,
+        "std": 0.0,
+        "min": 0.85,
+        "max": 0.85,
+        "n": 1
+      },
+      "composite_score": {
+        "mean": 0.655,
+        "std": 0.0,
+        "min": 0.655,
+        "max": 0.655,
+        "n": 1
+      },
+      "total_cost_usd": 0.005269
+    },
+    "new_agg": {
+      "resolution_score": {
+        "mean": 0.9,
+        "std": 0.0,
+        "min": 0.9,
+        "max": 0.9,
+        "n": 1
+      },
+      "compliance_score": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "n": 1
+      },
+      "continuity_score": {
+        "mean": 0.95,
+        "std": 0.0,
+        "min": 0.95,
+        "max": 0.95,
+        "n": 1
+      },
+      "tone_score": {
+        "mean": 0.9,
+        "std": 0.0,
+        "min": 0.9,
+        "max": 0.9,
+        "n": 1
+      },
+      "information_gathering": {
+        "mean": 0.95,
+        "std": 0.0,
+        "min": 0.95,
+        "max": 0.95,
+        "n": 1
+      },
+      "composite_score": {
+        "mean": 0.9425,
+        "std": 0.0,
+        "min": 0.9425,
+        "max": 0.9425,
+        "n": 1
+      },
+      "total_cost_usd": 0.00451
+    },
+    "improvement": 0.2875
+  },
+  "is_active": true
+}

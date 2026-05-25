@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-05-24T05:56:02.004220+00:00",
+  "findings": [
+    {
+      "finding_type": "compliance_blindspot",
+      "description": "All personas receive perfect compliance=1.0 with zero violations recorded, indicating no actual compliance checking occurred",
+      "evidence": {},
+      "correction_applied": "Implement persona-specific compliance rules and violation injection for testing",
+      "severity": "high"
+    },
+    {
+      "finding_type": "aggressive_behavior_reward",
+      "description": "Combative persona receives high tone=0.9 and continuity=0.8 despite lowest resolution=0.1, suggesting tone metric may reward matching aggressive tone",
+      "evidence": {},
+      "correction_applied": "Add explicit penalty for tone escalation or aggression matching",
+      "severity": "medium"
+    },
+    {
+      "finding_type": "inconsistent_persona_scoring",
+      "description": "Confused persona receives drastically lower tone=0.3 while combative receives 0.9 under identical compliance, showing inconsistent application across personas",
+      "evidence": {},
+      "correction_applied": "Normalize tone/continuity scoring with persona-adjusted baselines",
+      "severity": "medium"
+    },
+    {
+      "finding_type": "composite_formula_issue",
+      "description": "Composite scores remain high (0.485-0.685) with no violations ever recorded, so formula cannot demonstrate appropriate penalization",
+      "evidence": {},
+      "correction_applied": "Weight compliance violations at minimum 50% of composite and require test cases with known violations",
+      "severity": "high"
+    }
+  ],
+  "scores_analyzed": 5,
+  "flaws_detected": 4
+}

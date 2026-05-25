@@ -1,0 +1,16 @@
+conversation_id,agent_name,persona,prompt_version,resolution_score,compliance_score,continuity_score,tone_score,information_gathering,budget_adherence,composite_score,turn_count,llm_cost_usd
+baseline_system_cooperative_r1,system,cooperative,base,0.6,1.0,0.25,0.4,0.7,1.0,0.6475,21,0.00706875
+baseline_system_cooperative_r2,system,cooperative,base,0.35,1.0,0.45,0.7,0.75,1.0,0.6525,21,0.0073575
+baseline_system_cooperative_r3,system,cooperative,base,0.6,1.0,0.7,0.55,0.8,1.0,0.7475,18,0.00641375
+baseline_system_combative_r1,system,combative,base,0.2,1.0,0.75,0.85,0.35,1.0,0.635,21,0.00753875
+baseline_system_combative_r2,system,combative,base,0.1,1.0,0.95,0.85,0.75,1.0,0.675,21,0.006565
+baseline_system_combative_r3,system,combative,base,0.1,1.0,0.85,0.9,0.35,1.0,0.6275,21,0.00655125
+baseline_system_evasive_r1,system,evasive,base,0.2,1.0,0.5,0.8,0.2,1.0,0.575,17,0.00673875
+baseline_system_evasive_r2,system,evasive,base,0.2,1.0,0.65,0.85,0.3,1.0,0.615,21,0.00836375
+baseline_system_evasive_r3,system,evasive,base,0.2,1.0,0.3,0.6,0.1,1.0,0.505,21,0.00573875
+baseline_system_confused_r1,system,confused,base,0.2,1.0,0.9,0.75,0.3,1.0,0.6375,12,0.0039675
+baseline_system_confused_r2,system,confused,base,0.3,1.0,0.4,0.6,0.2,1.0,0.56,21,0.00575375
+baseline_system_confused_r3,system,confused,base,0.2,1.0,0.9,0.8,0.25,1.0,0.64,16,0.00696625
+baseline_system_distressed_r1,system,distressed,base,0.65,1.0,0.45,0.8,0.55,1.0,0.7375,21,0.00816875
+baseline_system_distressed_r2,system,distressed,base,0.75,1.0,0.85,0.9,0.8,1.0,0.8675,21,0.00701375
+baseline_system_distressed_r3,system,distressed,base,0.35,1.0,0.25,0.65,0.15,1.0,0.555,16,0.00619

@@ -1,0 +1,34 @@
+{
+  "currency": "USD",
+  "lump_sum": {
+    "enabled": true,
+    "max_discount_percent": 30,
+    "minimum_payment_percent_of_balance": 70,
+    "commitment_deadline_hours": 48
+  },
+  "payment_plan": {
+    "enabled": true,
+    "minimum_down_payment_cents": 25000,
+    "minimum_monthly_payment_cents": 25000,
+    "maximum_term_months": 18,
+    "first_payment_deadline_hours": 48
+  },
+  "hardship": {
+    "enabled": true,
+    "required_when_hardship_or_distress": true,
+    "program_name": "hardship review program"
+  },
+  "documented_next_steps": [
+    "credit_reporting_review",
+    "legal_referral_review",
+    "asset_recovery_review",
+    "write_off_review"
+  ],
+  "forbidden_actions": [
+    "arrest_threat",
+    "wage_garnishment_threat_without_documented_step",
+    "undocumented_legal_threat",
+    "discount_above_policy",
+    "deadline_extension_without_authorization"
+  ]
+}

@@ -1,0 +1,74 @@
+services:
+  # ── Infrastructure ──
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: temporal
+      POSTGRES_USER: temporal
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  temporal:
+    image: temporalio/auto-setup:1.25
+    depends_on:
+      - postgres
+    ports:
+      - "7233:7233"
+    environment:
+      DB: postgres12
+      DB_PORT: 5432
+      POSTGRES_USER: temporal
+      POSTGRES_PWD: temporal
+      POSTGRES_SEEDS: postgres
+      SKIP_DEFAULT_NAMESPACE_CREATION: "false"
+
+  temporal-ui:
+    image: temporalio/ui:2.31.2
+    depends_on:
+      - temporal
+    ports:
+      - "8080:8080"
+    environment:
+      TEMPORAL_ADDRESS: temporal:7233
+      TEMPORAL_CORS_ORIGINS: http://localhost:3000
+
+  # ── Application ──
+  api:
+    build: .
+    depends_on:
+      - temporal
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    environment:
+      GROK_MODEL: ${GROK_MODEL:-grok-4.3}
+      TEMPORAL_HOST: temporal:7233
+      TEMPORAL_NAMESPACE: default
+      TEMPORAL_TASK_QUEUE: collections
+      LOG_LEVEL: INFO
+    volumes:
+      - appdata:/app/data
+    command: ["python", "-m", "collections_agent.api"]
+
+  worker:
+    build: .
+    depends_on:
+      - temporal
+    env_file:
+      - .env
+    environment:
+      GROK_MODEL: ${GROK_MODEL:-grok-4.3}
+      TEMPORAL_HOST: temporal:7233
+      TEMPORAL_NAMESPACE: default
+      TEMPORAL_TASK_QUEUE: collections
+      LOG_LEVEL: INFO
+    volumes:
+      - appdata:/app/data
+    command: ["python", "-m", "collections_agent.worker"]
+
+volumes:
+  pgdata:
+  appdata:

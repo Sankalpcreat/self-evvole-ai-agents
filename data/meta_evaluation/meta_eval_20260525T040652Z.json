@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-05-25T04:06:47.144558+00:00",
+  "findings": [
+    {
+      "finding_type": "compliance_blind_spot",
+      "description": "Compliance is uniformly 1.0 with zero violations across all personas and runs, including combative and evasive ones where violations are likely. This indicates the compliance checker has blind spots.",
+      "evidence": {},
+      "correction_applied": "Add persona-specific compliance probes and violation detection rules that trigger on evasive or combative responses.",
+      "severity": "high"
+    },
+    {
+      "finding_type": "inconsistent_persona_scoring",
+      "description": "Combative and evasive personas receive high continuity/tone scores despite near-zero resolution, inflating composites relative to cooperative runs; scoring weights appear unadjusted for persona difficulty.",
+      "evidence": {},
+      "correction_applied": "Introduce persona difficulty multipliers or separate normalization per borrower type.",
+      "severity": "medium"
+    },
+    {
+      "finding_type": "composite_formula_issue",
+      "description": "Composite never applies penalties because violations array is always empty; formula cannot penalize compliance issues even if they existed.",
+      "evidence": {},
+      "correction_applied": "Make compliance a hard constraint or apply an explicit penalty term regardless of violation list population.",
+      "severity": "high"
+    }
+  ],
+  "scores_analyzed": 15,
+  "flaws_detected": 3
+}

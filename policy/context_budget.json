@@ -1,0 +1,18 @@
+{
+  "agent_total_context_tokens": 2000,
+  "handoff_summary_tokens": 500,
+  "agent_budgets": {
+    "assessment_chat": {
+      "system_prompt_tokens": 2000,
+      "handoff_tokens": 0
+    },
+    "resolution_voice": {
+      "system_prompt_tokens": 1500,
+      "handoff_tokens": 500
+    },
+    "final_notice_chat": {
+      "system_prompt_tokens": 1500,
+      "handoff_tokens": 500
+    }
+  }
+}
