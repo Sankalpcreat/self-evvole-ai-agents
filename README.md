@@ -153,6 +153,31 @@ The browser records borrower audio, the backend transcribes it with xAI STT,
 runs Agent 2 with Grok and the settlement policy, generates xAI TTS audio, and
 saves the transcript under `data/voice_sessions/`.
 
+## Benchmark Artifacts
+
+The latest reproducibility run produced these report figures from the checked-in
+CSV/JSON artifacts in `data/`.
+
+### Baseline Composite by Persona
+
+![Baseline composite score by persona](docs/report_assets/riverline_baseline_composite.png)
+
+### Baseline Metric Matrix
+
+![Baseline metric matrix](docs/report_assets/riverline_metric_matrix.png)
+
+### Prompt Evolution
+
+![Prompt evolution by agent](docs/report_assets/riverline_prompt_evolution.png)
+
+### Meta-Evaluation Findings
+
+![Meta-evaluation findings](docs/report_assets/riverline_meta_eval_findings.png)
+
+### Cost Breakdown
+
+![Cost breakdown](docs/report_assets/riverline_cost_breakdown.png)
+
 ## Self-Learning Loop
 
 ### How it works
