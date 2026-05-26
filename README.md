@@ -1,4 +1,4 @@
-# Riverline Collections Agents
+#  Collections Agents
 
 Self-learning AI debt collections system with three agents orchestrated by [Temporal](https://temporal.io), powered by [Grok](https://x.ai) (xAI).
 
